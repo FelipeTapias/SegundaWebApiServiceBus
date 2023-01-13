@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32929.385
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SegundaWebAPI", "SegundaWebAPI.csproj", "{955C1AF8-3415-4AAB-B750-611E53AA7476}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapters", "Adapters\Adapters.csproj", "{FB9DA1FC-113A-4F88-83F5-47F65A0D82FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{955C1AF8-3415-4AAB-B750-611E53AA7476}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{955C1AF8-3415-4AAB-B750-611E53AA7476}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{955C1AF8-3415-4AAB-B750-611E53AA7476}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{955C1AF8-3415-4AAB-B750-611E53AA7476}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FB9DA1FC-113A-4F88-83F5-47F65A0D82FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FB9DA1FC-113A-4F88-83F5-47F65A0D82FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FB9DA1FC-113A-4F88-83F5-47F65A0D82FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FB9DA1FC-113A-4F88-83F5-47F65A0D82FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4108F91F-6DB5-4B0B-AACC-16A46E913855}
+	EndGlobalSection
+EndGlobal
