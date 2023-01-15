@@ -19,4 +19,9 @@
     <ProjectReference Include="Adapters\Adapters.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Adapters\Helpers\" />
+    <Folder Include="Adapters\Interface\" />
+  </ItemGroup>
+
 </Project>

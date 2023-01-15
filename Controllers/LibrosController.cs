@@ -1,10 +1,6 @@
-﻿using Adapters;
-using Adapters.Interface;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SegundaWebAPI.Entities;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace SegundaWebAPI.Controllers
 {
@@ -13,13 +9,10 @@ namespace SegundaWebAPI.Controllers
     public class LibrosController: ControllerBase
     {
         private readonly ApplicationDbContext context;
-        private readonly ISenderMessage senderMessage;
 
-        public LibrosController(ApplicationDbContext context,
-                                ISenderMessage senderMessage)
+        public LibrosController(ApplicationDbContext context)
         {
             this.context = context;
-            this.senderMessage = senderMessage;
         }
 
         [HttpGet("{id:int}")]
@@ -31,22 +24,15 @@ namespace SegundaWebAPI.Controllers
 
             return libro;
         }
-        //[HttpPost]        
-        //public async Task<ActionResult> Post(Libro libro)
-        //{
-        //    var existeAutor = await context.Autores.AnyAsync(x => x.Id == libro.AutorId);
-        //    if(!existeAutor)
-        //        return BadRequest($"No exite el autor con el id: { libro.AutorId }");
-
-        //    context.Add(libro);
-        //    await context.SaveChangesAsync();
-        //    return Ok();
-        //}
-
         [HttpPost]
-        public async Task<ActionResult> Post([FromBody] string message)
+        public async Task<ActionResult> Post(Libro libro)
         {
-            await senderMessage.CreateMessage(message);
+            var existeAutor = await context.Autores.AnyAsync(x => x.Id == libro.AutorId);
+            if (!existeAutor)
+                return BadRequest($"No exite el autor con el id: {libro.AutorId}");
+
+            context.Add(libro);
+            await context.SaveChangesAsync();
             return Ok();
         }
     }
