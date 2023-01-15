@@ -39,11 +39,8 @@ namespace SegundaWebAPI
             }
 
             app.UseHttpsRedirection();
-
             app.UseRouting();
-
             app.UseAuthorization();
-
             app.UseEndpoints(enpoints =>
             {
                 enpoints.MapControllers();
